@@ -24,7 +24,7 @@ export default function WeddingWebsite() {
         return <DetailsSection />;
       case "rsvp":
         return <RSVPSection formData={formData} setFormData={setFormData} />;
-      case "details":
+      case "gallery":
         return <GallerySection />;
       default:
         return <HomeSection />;

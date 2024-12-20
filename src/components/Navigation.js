@@ -17,18 +17,16 @@ export default function NavigationMenu({ setActiveSection }) {
           id="navbarNav"
         >
           <ul className="navbar-nav">
-            {["Home", "Our Story", "Details", "RSVP", "Gallery"].map(
-              (section) => (
-                <li key={section} className="nav-item">
-                  <button
-                    className="nav-item-link"
-                    onClick={() => setActiveSection(section.toLowerCase())}
-                  >
-                    {section}
-                  </button>
-                </li>
-              )
-            )}
+            {["Home", "Details", "RSVP", "Gallery"].map((section) => (
+              <li key={section} className="nav-item">
+                <button
+                  className="nav-item-link"
+                  onClick={() => setActiveSection(section.toLowerCase())}
+                >
+                  {section}
+                </button>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

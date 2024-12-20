@@ -5,6 +5,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  border: 20px solid;
+  border-image: url("/public/Asset 2.svg");
+  min-height: 90vh;
+  background-color: beige !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.monsieur-la-doulaise-regular {
+  font-family: "Monsieur La Doulaise", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  background-color: rgb(245, 245, 220);
+  padding: 2rem;
 }
 
 code {
@@ -12,14 +29,44 @@ code {
     monospace;
 }
 
+* {
+  color: #2e3192 !important;
+}
+
+h1 {
+  font-family: "Monsieur La Doulaise", serif;
+  font-size: 70px !important;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Georgia";
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .nav-item-link {
   background: none;
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  color: #333;
+  color: #2e3192;
 }
 
 .nav-item-link:hover {
-  color: #0066cc;
+  color: #0036cc;
+}
+
+.paper-background {
+  background-image: url("/public/white-paper-texture.jpg");
+  background-size: 50%; /* Makes image cover the entire div */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image from repeating */
+  height: 90vh;
 }
