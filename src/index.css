@@ -30,21 +30,29 @@ code {
 }
 
 * {
-  color: #2e3192 !important;
+  color: #25287d !important;
 }
 
 h1 {
   font-family: "Monsieur La Doulaise", serif;
-  font-size: 70px !important;
+  font-size: 4rem !important;
 }
 
-h2,
+h2 {
+  font-family: "Monsieur La Doulaise", serif;
+  font-size: 2.5rem !important;
+}
+
 h3,
 h4,
 h5,
-h6,
+h6 {
+  font-family: "Georgia";
+}
+
 p {
   font-family: "Georgia";
+  margin-bottom: 0px !important;
 }
 .container {
   display: flex;
@@ -56,7 +64,7 @@ p {
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  color: #2e3192;
+  color: #25287d;
 }
 
 .nav-item-link:hover {
@@ -68,5 +76,114 @@ p {
   background-size: 50%; /* Makes image cover the entire div */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents image from repeating */
-  height: 90vh;
+  height: 100%;
+}
+
+.paper-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paper-content-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paper-content-box {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.home-image {
+  width: 75%;
+  margin: 30px;
+  padding-top: 30px;
+}
+
+.text-small {
+  font-size: 0.9rem;
+}
+
+.navbar {
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-hidden {
+  transform: translateY(-100%);
+}
+
+@media screen and (max-width: 768px) {
+  /* Tablet styles */
+  body {
+    padding: 1rem;
+    border-width: 30px;
+  }
+
+  h1 {
+    font-size: 50px !important;
+  }
+
+  .paper-background {
+    background-size: 75%;
+    height: 70vh;
+  }
+
+  .home-image {
+    width: 90%;
+    margin: 30px;
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Mobile phone styles */
+  body {
+    padding: 0.5rem;
+    border-width: 30px;
+  }
+
+  h1 {
+    font-size: 40px !important;
+  }
+
+  .paper-background {
+    background-size: 100%;
+    height: 20vh;
+  }
+
+  .home-image {
+    width: 140%;
+    margin: 30px;
+    padding-top: 30px;
+  }
+
+  html {
+    padding: 1rem;
+  }
+
+  .paper-content-box {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .paper-content-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+  }
+  .paper-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+  }
 }
