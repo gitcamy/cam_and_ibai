@@ -8,20 +8,14 @@ export default function DetailsSection() {
           <div className="paper-content-box">
             <div className="paper-content-header">
               <h1 className="mb-0">Details</h1>
-              <p className="text-small">
-                We'd be thrilled to have you for as many events as you can join.
-              </p>
             </div>
 
             <br></br>
             <div className="paper-content">
-              <h6>Friday, April 10th, 2026</h6>
+              <h6>Friday, August 29th, 2025</h6>
               <h6>5 o'clock</h6>
-              <h2 className="text-nowrap">Rehersal Dinner</h2>
-              <p>
-                Join us for dinner and drinks at the Gordon's. Family-style meal
-                in the backyard.
-              </p>
+              <h2 className="text-nowrap">Welcome Drinks</h2>
+              <p></p>
               <p className="mb-0">
                 Location: 25251 Terreno Drive, Mission Viejo, CA
               </p>

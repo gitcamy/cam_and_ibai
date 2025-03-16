@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export default function NavigationMenu({ setActiveSection }) {
+export default function NavigationMenu({ setActiveSection, activeSection }) {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
 
@@ -31,12 +31,25 @@ export default function NavigationMenu({ setActiveSection }) {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div
-          className="collapse navbar-collapse justify-content-center"
+          className="collapse navbar-collapse mt-2 justify-content-center"
           id="navbarNav"
         >
           <ul className="navbar-nav">
-            {["Home", "Details", "RSVP", "Gallery"].map((section) => (
-              <li key={section} className="nav-item">
+            {[
+              "Home",
+              "Details",
+              "Things To Do",
+              "Where To Stay",
+              "Gallery",
+            ].map((section) => (
+              <li
+                key={section}
+                className={`nav-item ${
+                  section.toLowerCase() === activeSection
+                    ? "nav-item-active"
+                    : ""
+                }`}
+              >
                 <button
                   className="nav-item-link"
                   onClick={() => setActiveSection(section.toLowerCase())}
