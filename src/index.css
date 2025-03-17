@@ -88,21 +88,6 @@ p {
   width: 100vh;
   height: 100%;
 }
-.nav-item-link {
-  background: none;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  color: #25287d;
-}
-
-.nav-item-active {
-  border-bottom: 2px solid #25287d;
-}
-
-.nav-item-link:hover {
-  color: #0036cc;
-}
 
 .paper-background {
   background-image: url("/public/white-paper-texture.jpg");
@@ -140,14 +125,6 @@ p {
 
 .text-small {
   font-size: 0.9rem;
-}
-
-.navbar {
-  transition: transform 0.3s ease-in-out;
-}
-
-.nav-hidden {
-  transform: translateY(-100%);
 }
 
 @media screen and (max-width: 768px) {

@@ -1,37 +1,44 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles/Navigation.css";
 
 export default function NavigationMenu({ setActiveSection, activeSection }) {
-  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
-  const [visible, setVisible] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-      setPrevScrollPos(currentScrollPos);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos]);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <nav
-      className={`navbar navbar-expand-lg navbar-light bg-blue fixed-top ${
-        visible ? "" : "nav-hidden"
-      }`}
-    >
-      <div className="container">
+    <div className="d-flex justify-content-center">
+      <nav
+        className="navbar navbar-expand-lg navbar-light bg-transparent"
+        style={{
+          position: "fixed",
+          top: 0,
+          zIndex: 1000,
+          marginTop: "0.70rem",
+        }}
+      >
         <button
-          className="navbar-toggler"
+          className="navbar-toggler w-100 d-flex justify-content-center"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
+          onClick={toggleMenu}
+          aria-controls="navbarNav"
+          aria-expanded={isOpen}
+          aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <div className="navbar-toggler">
+            <i class="fa-solid fa-bars" style={{ color: "#25287d" }}></i>
+            <span className="px-2">Menu</span>
+          </div>
         </button>
         <div
-          className="collapse navbar-collapse mt-2 justify-content-center"
+          className={`collapse navbar-collapse ${
+            isOpen
+              ? "show d-flex align-items-center justify-content-center mt-3"
+              : ""
+          }`}
           id="navbarNav"
         >
           <ul className="navbar-nav">
@@ -51,8 +58,11 @@ export default function NavigationMenu({ setActiveSection, activeSection }) {
                 }`}
               >
                 <button
-                  className="nav-item-link"
-                  onClick={() => setActiveSection(section.toLowerCase())}
+                  className="nav-item-link w-100"
+                  onClick={() => {
+                    setActiveSection(section.toLowerCase());
+                    setIsOpen(false);
+                  }}
                 >
                   {section}
                 </button>
@@ -60,7 +70,7 @@ export default function NavigationMenu({ setActiveSection, activeSection }) {
             ))}
           </ul>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 }
