@@ -1,28 +1,8 @@
 @font-face {
-  font-family: "Script1"; /* Name of the font */
-  src: url("../public/fonts/Quetine.woff2") format("woff2"),
-    /* Adjust the path as necessary */ url("../public/fonts/Quetine.woff")
-      format("woff");
-  font-weight: normal; /* Specify the font weight */
-  font-style: normal; /* Specify the font style */
-}
-
-@font-face {
-  font-family: "Script2"; /* Name of the font */
-  src: url("../public/fonts/FloresttaOpheralio.woff2") format("woff2"),
-    /* Adjust the path as necessary */
-      url("../public/fonts/FloresttaOpheralio.woff") format("woff");
-  font-weight: normal; /* Specify the font weight */
-  font-style: normal; /* Specify the font style */
-}
-
-@font-face {
-  font-family: "Script3"; /* Name of the font */
-  src: url("../public/fonts/Forghive.woff2") format("woff2"),
-    /* Adjust the path as necessary */ url("../public/fonts/Forghive.woff")
-      format("woff");
-  font-weight: normal; /* Specify the font weight */
-  font-style: normal; /* Specify the font style */
+  src: "https://use.typekit.net/mdp0pou.css";
+  font-family: "antiquarian-scribe", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
@@ -32,8 +12,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border: 20px solid;
-  border-image: url("/public/Asset 2.svg");
   min-height: 90vh;
   background-color: beige !important;
   align-items: center;
@@ -61,12 +39,12 @@ code {
 }
 
 h1 {
-  font-family: "Monsieur La Doulaise", serif;
+  font-family: "antiquarian-scribe", serif;
   font-size: 4rem !important;
 }
 
 h2 {
-  font-family: "Monsieur La Doulaise", serif;
+  font-family: "antiquarian-scribe", serif;
   font-size: 2.5rem !important;
 }
 
@@ -74,12 +52,19 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Georgia";
+  font-family: "Sans", sans-serif;
+  font-weight: 100px;
 }
 
-p {
-  font-family: "Georgia";
+p,
+a,
+li {
+  font-family: "Inter";
   margin-bottom: 0px !important;
+}
+
+.script-text {
+  font-family: "antiquarian-scribe", serif;
 }
 .container {
   display: flex;
@@ -123,6 +108,11 @@ p {
   padding-top: 60px;
 }
 
+.home-image-mobile {
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
 .text-small {
   font-size: 0.9rem;
 }
@@ -142,12 +132,6 @@ p {
     background-size: 75%;
     height: 70vh;
   }
-
-  .home-image {
-    width: 90%;
-    margin: 30px;
-    padding-top: 30px;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -164,12 +148,6 @@ p {
   .paper-background {
     background-size: 100%;
     height: 20vh;
-  }
-
-  .home-image {
-    width: 140%;
-    margin: 30px;
-    padding-top: 30px;
   }
 
   html {
